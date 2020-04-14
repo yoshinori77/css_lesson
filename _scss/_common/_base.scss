@@ -1,0 +1,69 @@
+$font-family-muli: 'Muli', sans-serif;
+
+body {
+  position: relative;
+  color: $white;
+  word-wrap: break-word;
+  display: block;
+  font: 16px/1em, "Noto Sans JP", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    @include z-index(mainbg);
+    display: block;
+  }
+}
+
+.pc{
+  display: inline-block;
+  @media screen and (max-device-width: 1024px) {
+     display: none;
+  }
+}
+
+.sp{
+  display: none;
+  @media screen and (max-device-width: 1024px) {
+     display: inline-block;
+  }
+}
+
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  background: #000;
+  z-index: 3;
+  &__logo{
+    margin: 11px auto 0;
+    width: 44px;
+    height: auto;
+    display: block;
+  }
+}
+
+.footer{
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #000;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-family: $font-family-muli;
+  font-weight: 400;
+}

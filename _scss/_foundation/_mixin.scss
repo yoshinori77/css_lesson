@@ -1,0 +1,37 @@
+// よく使用するstyleを関数化（mixin）し、ここに集約
+
+@mixin fadeinout($time){
+  transition: all $time ease-out;
+}
+
+@mixin abase{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: pointer;
+  cursor: hand;
+}
+
+@mixin z-index($key){
+  z-index: map-get($layer, $key);
+}
+
+@mixin openbtn{
+    width: 26px;
+    height: 26px;
+    border-radius: 100px;
+}
+
+@mixin closebtn{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 26px;
+    border-radius: 50px;
+    background: $linkcolor;
+}

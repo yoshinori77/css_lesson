@@ -1,0 +1,61 @@
+// く使用するstyleを変数化し、ここに集約
+$white: #fff;
+$black: #000;
+$darkblue: #314048;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #E27985;
+$red: #D50C0E;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #7BCABD;
+$teal: #20c997;
+$cyan: #17a2b8;
+$white: #fff;
+$gray: #92989B;
+$gray2: #ececec;
+$gray3: #ccc;
+$gray4: #B5B5B5;
+$gray5: #F7F7F7;
+$gray6: #adadad;
+$gray7: #999;
+$gray-dark: #343a40;
+$maincolor: #465A7C;
+$subcolor: #6c757d;
+$success: #28a745;
+$info: #17a2b8;
+$warning: #ffc107;
+$danger: #cc0000;
+$light: #F8FCFB;
+$dark: #314048;
+$facebook: #3C5A99;
+$instagram: #CF2E92;
+$line: #00B900;
+$txt: #222;
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+//setting z-index
+$layer:(
+  blackbg: 50,
+  openbn: 120,
+  closebtn: 55,
+  navlink: 200,
+  topnav: 100,
+  snsnav: 96,
+  header: 90,
+  navilayer: 80,
+  topbtn: 32,
+  articlelink: 20,
+  artcilebg: 12,
+  mainlayer: 10,
+  mainbg: -1,
+  default: 1
+);
+
+//font
+$font-normal: 'Noto Sans JP', sans-serif;
+$font-en: 'Ubuntu', sans-serif;
