@@ -8,91 +8,127 @@ $white: #fff;
 
 .main{
   position: relative;
-  top: 64px;
+  width: 100%;
+  height: auto;
   left: 0;
-  margin-bottom: 175px;
+  margin-bottom: 100px;
+  background-size: cover !important;
+  @media screen and (max-device-width: 750px) {
+    margin-bottom: 60px;
+  }
   &__img{
-    width: 100%;
+    top: 64px;
+    padding: 43% 0 0 0;
+    background-position: 50% 38% !important;
+    background-size: cover !important;
+    @media screen and (max-device-width: 750px) {
+      top: 48px;
+      padding: 95% 0 0 0;
+      background-position: 50% 50% !important;
+      background-size: cover !important;
+    }
+  }
+}
+
+.main__news{
+  &__h2{
+    color: $black;
+    font-family: $font-family-muli;
+    font-size: 250%;
+    font-weight: 700;
+    text-align: center;
+    @media screen and (max-device-width: 750px) {
+      font-size: 175%;
+      font-weight: 600;
+    }
+    &--underline{
+      border-bottom:solid;
+      border-color:$black;
+      border-width:1px;
+    }
+  }
+  &__info{
+    @include fadeinout(0.3s);
+    width: 180px;
+    height: 44px;
+    padding: 10px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: $black;
+    text-align: center;
+    font-family: $font-family-muli;
+    font-size: 18px;
+    font-weight: 700;
+    @media screen and (max-device-width: 750px) {
+      padding: 12px;
+      font-size: 4.5vw;
+      font-weight: 500;
+    }
+    &:hover{
+      background: $lightblue;
+    }
+  }
+}
+
+.main__news__contents{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 51px;
+  @media screen and (max-device-width: 750px) {
+    margin-bottom: 15px;
+  }
+  &__img{
+    position: relative;
+    width: 22%;
     height: auto;
-    padding: 40.26% 0 0 0;
+    padding: 22% 0 0 0;
     background-position: 50% 50% !important;
     background-size: cover !important;
-  }
-  &__news{
-    &__text{
-      color: $black;
-      font-family: $font-family-muli;
-      font-size: 250%;
-      font-weight: 700;
-      text-align: center;
-      &--underline{
-        border-bottom:solid;
-        border-color:$black;
-        border-width:1px;
+    border: 1px solid $grey;
+    box-sizing: border-box;
+    @include fadeinout(0.3s);
+    @media screen and (max-device-width: 750px) {
+      width: 44%;
+      height: auto;
+      padding: 44% 0 0 0;
+      margin-bottom: 6%;
+    }
+    &:hover{
+      border-color: $lightblue;
+      border-style: solid;
+      border-width: 1px;
+      .main__news__contents__img__text{
+        background: $lightblue;
       }
     }
-    &__contents{
-      position: relative;
+    &__link{
+      @include abase;
+      z-index: 999;
+    }
+    &__text{
+      @include fadeinout(0.3s);
+      width: 100%;
+      height: 30%;
+      position: absolute;
+      bottom: 0;
+      color: $white;
+      background: rgba(0,0,0,0.8);
       display: flex;
       align-items: center;
-      justify-content: space-around;
-      margin-bottom: 51px;
-      &__img{
-        position: relative;
-        @include fadeinout(0.3s);
-        width: 22%;
-        height: auto;
-        padding: 22% 0 0 0;
-        background-position: 50% 50% !important;
-        background-size: cover !important;
-        border: 1px solid $grey;
-        box-sizing: border-box;
-        &:hover{
-          border-color: $lightblue;
-          border-style: solid;
-          border-width: 1px;
-          .main__news__contents__img__text{
-            background: $lightblue;
-          }
-        }
-        &__link{
-          @include abase;
-          z-index: 999;
-        }
-        &__text{
-          @include fadeinout(0.3s);
-          width: 100%;
-          height: 30%;
-          position: absolute;
-          bottom: 0;
-          color: $white;
-          background: rgba(0,0,0,0.8);
-          display: flex;
-          align-items: center;
-          flex-wrap: wrap;
-          justify-content: center;
-          padding: 0 12px 0;
-          box-sizing: border-box;
-          font-family: $font-family-notosans;
-          font-weight: 500;
-          font-size: 18px;
-        }
-      }
-    }
-    &__info{
-      @include fadeinout(0.3s);
-      width: 180px;
-      height: 44px;
-      margin: 0 auto;
-      padding: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0 12px 0;
       box-sizing: border-box;
-      background: $black;
-      text-align: center;
-      font-size: 18px;
-      font-family: $font-family-muli;
-      font-weight: 700;
-      &:hover{
-        background: $lightblue;
+      font-family: $font-family-notosans;
+      font-size: 113%;
+      font-weight: 500;
+      @media screen and (max-device-width: 750px) {
+        padding: 0 4px 0;
+        font-size: 3vw;
+        font-weight: 400;
       }
     }
   }

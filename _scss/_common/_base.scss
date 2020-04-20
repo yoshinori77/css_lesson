@@ -43,11 +43,18 @@ body {
   height: 64px;
   background: #000;
   z-index: 3;
+  @media screen and (max-device-width: 750px) {
+    height: 48px;
+  }
   &__logo{
     margin: 11px auto 0;
     width: 44px;
     height: auto;
     display: block;
+    @media screen and (max-device-width: 750px) {
+      margin: 7px auto 0;
+      height: 33px;
+    }
   }
 }
 
@@ -63,7 +70,11 @@ body {
   background: #000;
   text-align: center;
   box-sizing: border-box;
-  font-size: 14px;
   font-family: $font-family-muli;
+  font-size: 14px;
   font-weight: 400;
+  @media screen and (max-device-width: 750px) {
+    font-size: 14px;
+    font-weight: 100;
+  }
 }
